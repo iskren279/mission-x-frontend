@@ -19,69 +19,69 @@ import StudentProfiles from "./pages/teacherDashboard/studentProfiles/StudentPro
 const router = createBrowserRouter([
     {
         path : "/",
-        element : <App/>,
+        Component : App,
         children : [
             {
                 index: true,
-                component: Home,
+                Component: Home,
             }, 
             {
                 path : "/login",
-                component : Login,
+                Component : Login,
             },
             {
                 path : "/project-library",
-                component : ProjectLibrary,
+                Component : ProjectLibrary,
             },
             {
                 path : "/student-profile-viewer",
-                component : StudentProfileViewer,
+                Component : StudentProfileViewer,
             },
             {
                 path : "/student-dashboard",
-                component : StudentDashboard,
+                Component : StudentDashboard,
                 children : [
                     {
                         index : true,
-                        component : LearningObjectives,
+                        Component : LearningObjectives,
                     },
                     {
                         path : "instructions",
-                        component : Instructions,
+                        Component : Instructions,
                     },
                     {
                         path : "make-project",
-                        component : MakeProject,
+                        Component : MakeProject,
                     },
                     {
                         path : "submit-project",
-                        component : SubmitProject,
+                        Component : SubmitProject,
                     },
                     {
                         path : "video-tutorial",
-                        component : VideoTutorial,
+                        Component : VideoTutorial,
                     },
                 ],
             },
             {
                 path : "/teacher-dashboard",
-                component : TeacherDashboard,
+                Component : TeacherDashboard,
                 children : [
                     {
                         index : true,
-                        component : ProgressTracker,
+                        Component : ProgressTracker,
                     },
                     {
                         path : "help-requests",
-                        component : HelpRequests,
+                        Component : HelpRequests,
                     },
                     {
                         path : "project-submissions",
-                        component : ProjectSubmissions,
+                        Component : ProjectSubmissions,
                     },
                     { 
                         path : "student-profiles",
-                        component : StudentProfiles,
+                        Component : StudentProfiles,
                     },
                 ],
             },
