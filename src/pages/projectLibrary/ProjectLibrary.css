@@ -1,0 +1,109 @@
+.navbar {
+    background-color: #42b4e6;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+}
+
+.levelupWorks img {
+    height: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 80px;
+    height: 0px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.flags {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+
+    margin-bottom: 2px;
+}
+
+.flags img {
+    height: 12px;
+    width: auto;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    font-weight: bold;
+}
+
+.profile img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Footer CSS */
+.footer {
+    background-color: #c6e8f5;
+    min-height: 250px;
+
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    padding: 80px 60px;
+}
+
+/* Stacks them into coloumns*/
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Just changess the h3s*/
+.footer-column h3 {
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+/*Paragraph Changes*/
+.footer-column p {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+
+    margin: 4px 0;
+}
+
+/*Column Distancing*/
+.about {
+    max-width: 320px;
+    line-height: 1.5;
+}
