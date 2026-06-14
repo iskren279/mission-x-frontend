@@ -5,9 +5,8 @@ import Instructions from "./pages/studentDashboard/instructions/Instructions";
 function App() {
   return (
     <>
-      <h1>Start MissionX Here</h1>
+      <h1></h1>
       <Instructions />
-      <Outlet />
     </>
   );
 }
