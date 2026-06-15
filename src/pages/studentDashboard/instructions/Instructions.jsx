@@ -1,58 +1,14 @@
-import React from "react";
-import "./Instructions.css";
+import styles from "./Instructions.module.css";
+import Sidebar from "../../../components/Sidebar";
+import scratchScreenshot from "../../../assets/Home/scratch screenshot.png";
 
 export default function Instructions() {
-  const menuItems = [
-    "Learning Objectives",
-    "Instructions",
-    "Video Tutorial",
-    "Make Project",
-    "Submit Project",
-    "Bonus Challenge",
-    "Take the Quiz",
-  ];
-
   return (
-    <div className="app">
-      {/* SIDEBAR */}
-      <aside className="sidebar">
-        {/* TOP LOGO SECTION */}
-        <div className="sidebar-logo">
-          <div className="logo-circle">MX</div>
-          <h3 className="logo-text">MISSION X</h3>
-        </div>
+    <div className={styles.app}>
+      <Sidebar />
 
-        {/* NAV ITEMS */}
-        <div className="menu">
-          {menuItems.map((item) => (
-            <button key={item} className="nav-item">
-              {item}
-            </button>
-          ))}
-        </div>
-
-        {/* FOOTER (with icons) */}
-        <div className="sidebar-footer">
-          <div className="footer-item">
-            <span className="icon">👤</span>
-            <span>Profile</span>
-          </div>
-
-          <div className="footer-item">
-            <span className="icon">⚙️</span>
-            <span>Settings</span>
-          </div>
-
-          <div className="footer-item logout">
-            <span className="icon">🚪</span>
-            <span>Logout</span>
-          </div>
-        </div>
-      </aside>
-
-      {/* MAIN */}
-      <main className="main">
-        <div className="card">
+      <main className={styles.main}>
+        <div className={styles.card}>
           <h1>1. JOIN SCRATCH</h1>
 
           <p>
@@ -60,17 +16,15 @@ export default function Instructions() {
             first.
           </p>
 
-          <p>
-            Go to <b>scratch.mit.edu</b> and click <b>Join Scratch</b>.
-          </p>
+          <p>Go to https://scratch.mit.edu. Click on Join Scratch.</p>
 
           <img
-            src="https://scratch.mit.edu/images/scratch-og.png"
-            className="img"
-            alt="Scratch"
+            src={scratchScreenshot}
+            alt="Scratch homepage"
+            className={styles.img}
           />
 
-          <p>Follow the instructions to complete signup.</p>
+          <p>Follow the instructions to join...</p>
         </div>
       </main>
     </div>

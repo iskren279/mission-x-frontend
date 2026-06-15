@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: #8fd3f4;
+}
+
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+.card {
+  background: #d9f0ff;
+  padding: 40px;
+  border-radius: 20px;
+  min-height: 80vh;
+}
+
+.card p {
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
