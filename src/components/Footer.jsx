@@ -17,11 +17,6 @@ export default function Footer() {
         <span className={styles.icon}>🚪</span>
         <span>Logout</span>
       </div>
-
-      <div className={styles.levelUp}>
-        <span>©</span>
-        <span>LevelUp Works 2020</span>
-      </div>
     </div>
   );
 }

@@ -1,0 +1,118 @@
+.navbar {
+  height: 60px;
+  background: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logoText {
+  font-size: 12px;
+  font-weight: bold;
+  color: #43c0f6;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectTitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.projectSubtitle {
+  font-size: 10px;
+  color: #777;
+}
+
+.progressCircle {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  border: 2px solid #f7c948;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.progressDots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  border: 2px solid #43c0f6;
+}
+
+.rightSection {
+  display: flex;
+  gap: 10px;
+}
+
+.submitBtn,
+.helpBtn,
+.projectsBtn {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.submitBtn {
+  background: #6d6d6d;
+}
+
+.helpBtn {
+  background: #f91c85;
+}
+
+.projectsBtn {
+  background: #43c0f6;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+}
+
+.navbar {
+  margin: 25px 25px 0 25px;
+}
+
+.rightSection {
+  display: flex;
+  gap: 10px;
+  margin-left: 30px;
+}
