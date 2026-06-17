@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+.headerPlacholer {
+  background-color: #43c0f6;
+  height: 6.26vh;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #eeeeee;
+  height: 76.93vh;
+}
+.box1 {
+  background-color: #FFFFFF;
+  border: 2px #E2DFDF;
+  border-radius: 30px;
+  margin-top: 13.59vh;
+  margin-left: 17.4vw;
+  margin-right: 1.825vw;
+  margin-bottom: 3.37vh;
+  height: 56.21vh;
+  width: 18.8vw;
+  text-align: center;
+}
+.btn {
+  border: solid 1px #71C7F4;
+  color: #71C7F4;
+  margin-bottom: 12%;
+  width: 55%;
+  background-color: transparent;
+  border-radius: 7px;
+}
+.teach {
+  margin-top: 15%;
+  margin-bottom: 25%;
+  height: 30.43%;
+}
+.box2 {
+  background-color: #FFFFFF;
+  border: 2px #E2DFDF;
+  border-radius: 30px;
+  margin-top: 13.59vh;
+  margin-left: 1.825vw;
+  margin-right: 16.93vw;
+  height: 69.6vh;
+  width: 42.71vw;
+  text-align: center;
+  position: relative
+}
+.container1 {
+background-color: #eeeeee;
+height: 16.81vh;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+.btn1 {
+  background-color: #F91C85;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin-top: 6.74vh;
+  width: 10.42vw;
+  text-decoration: none;
+}
+.btn2 {
+  background-color: #E5AB2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 6.74vh;
+  margin-left: 3.125vw;
+  margin-right: 16.93vw;
+  width: 11.46vw;
+  text-decoration: none;
+}
+.footerPlacholer {
+  background-color: #b2e4fa;
+  height: 61.97vh;
+  text-align: center;
+}
