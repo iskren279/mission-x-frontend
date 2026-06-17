@@ -1,26 +1,38 @@
 .navbar {
+  width: 100%;
   height: 60px;
   background: white;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Crucial: pushes Left, Center, and Right apart */
   align-items: center;
-
   padding: 0 20px;
-
+  box-sizing: border-box;
   border-bottom: 1px solid #ddd;
 }
 
+/* Left Section */
 .leftSection {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
-.logoText {
-  font-size: 12px;
-  font-weight: bold;
-  color: #43c0f6;
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+}
+
+/* FIX FOR THE CIRCLES: 
+   This wrapper holds the project text and progress trackers side-by-side
+*/
+.centerSection {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjusts horizontal distance between text block and circle */
 }
 
 .projectInfo {
@@ -41,15 +53,11 @@
 .progressCircle {
   width: 24px;
   height: 24px;
-
   border-radius: 50%;
-
   border: 2px solid #f7c948;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 12px;
   font-weight: bold;
 }
@@ -57,20 +65,21 @@
 .progressDots {
   display: flex;
   gap: 6px;
+  align-items: center; /* Keeps little circles vertically centered */
 }
 
 .dot {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
-
   border: 2px solid #43c0f6;
 }
 
+/* Right Section */
 .rightSection {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
 }
 
 .submitBtn,
@@ -79,7 +88,6 @@
   border: none;
   border-radius: 4px;
   padding: 8px 16px;
-
   color: white;
   font-size: 11px;
   cursor: pointer;
@@ -97,22 +105,18 @@
   background: #43c0f6;
 }
 
-.logo {
+/* FIX FOR THE FLAGS: Spaced out further right */
+.flagsContainer {
   display: flex;
+  gap: 6px;
   align-items: center;
+  margin-left: 25px;
+  margin-top: -30px;
 }
 
-.logoImage {
-  height: 40px;
-  width: auto;
-}
-
-.navbar {
-  margin: 25px 25px 0 25px;
-}
-
-.rightSection {
-  display: flex;
-  gap: 10px;
-  margin-left: 30px;
+.flag {
+  width: 20px;
+  height: 10px;
+  object-fit: contain;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }

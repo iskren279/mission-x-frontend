@@ -1,8 +1,7 @@
 import styles from "./Instructions.module.css";
 import Sidebar from "../../../components/Sidebar";
-import scratchScreenshot from "../../../assets/Home/scratch screenshot.png";
+
 import Navbar from "../../../components/Navbar";
-import levelUpLogo from "../assets/Navbar/LevelUpWorks-blue.png";
 
 export default function Instructions() {
   return (
@@ -24,22 +23,13 @@ export default function Instructions() {
 
               <p>
                 Go to https://scratch.mit.edu. Click on{" "}
-                <a
-                  href="https://scratch.mit.edu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join Scratch
-                </a>
-                .
+                <span className={styles.joinScratch}>Join Scratch</span>.
               </p>
-
               <img
-                src={scratchScreenshot}
-                alt="Scratch homepage"
+                src="public/images/projects/project01-instructions.png"
+                alt="Project Instructions"
                 className={styles.img}
               />
-
               <p>
                 Follow the instructions to join. You will need a username and
                 password that you will remember.

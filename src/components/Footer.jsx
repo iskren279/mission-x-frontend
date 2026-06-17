@@ -1,22 +1,25 @@
 import styles from "./Footer.module.css";
+import profileIcon from "../assets/profile.png";
+import settingsIcon from "../assets/settings.png";
+import logoutIcon from "../assets/logout.png";
 
 export default function Footer() {
   return (
     <div className={styles.sidebarFooter}>
-      <div className={styles.footerItem}>
-        <span className={styles.icon}>👤</span>
+      <button className={styles.footerButton}>
+        <img src={profileIcon} alt="Profile" className={styles.footerIcon} />
         <span>Profile</span>
-      </div>
+      </button>
 
-      <div className={styles.footerItem}>
-        <span className={styles.icon}>⚙️</span>
+      <button className={styles.footerButton}>
+        <img src={settingsIcon} alt="Settings" className={styles.footerIcon} />
         <span>Settings</span>
-      </div>
+      </button>
 
-      <div className={`${styles.footerItem} ${styles.logout}`}>
-        <span className={styles.icon}>🚪</span>
-        <span>Logout</span>
-      </div>
+      <button className={styles.footerButton}>
+        <img src={logoutIcon} alt="Log Out" className={styles.footerIcon} />
+        <span>Log Out</span>
+      </button>
     </div>
   );
 }

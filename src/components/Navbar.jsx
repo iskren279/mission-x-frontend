@@ -1,9 +1,12 @@
 import styles from "./Navbar.module.css";
 import levelUpLogo from "../assets/Navbar/LevelUpWorks-blue.png";
+import nzFlag from "../assets/navbar/NZFlag.png";
+import maoriFlag from "../assets/navbar/MaoriFlag.png";
 
 export default function Navbar() {
   return (
     <header className={styles.navbar}>
+      {/* 1. LEFT SECTION (Just the Logo) */}
       <div className={styles.leftSection}>
         <div className={styles.logo}>
           <img
@@ -12,7 +15,10 @@ export default function Navbar() {
             className={styles.logoImage}
           />
         </div>
+      </div>
 
+      {/* 2. CENTER SECTION (Text, Circle, and Dots) */}
+      <div className={styles.centerSection}>
         <div className={styles.projectInfo}>
           <span className={styles.projectTitle}>PROJECT</span>
           <span className={styles.projectSubtitle}>Introduction</span>
@@ -27,12 +33,17 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* 3. RIGHT SECTION (Buttons and Flags) */}
       <div className={styles.rightSection}>
         <button className={styles.submitBtn}>Project Submitted</button>
-
         <button className={styles.helpBtn}>Ask Teacher For Help</button>
-
         <button className={styles.projectsBtn}>More Projects</button>
+
+        {/* Added the flags container here right after More Projects */}
+        <div className={styles.flagsContainer}>
+          <img src={nzFlag} alt="NZ Flag" className={styles.flag} />
+          <img src={maoriFlag} alt="Maori Flag" className={styles.flag} />
+        </div>
       </div>
     </header>
   );
