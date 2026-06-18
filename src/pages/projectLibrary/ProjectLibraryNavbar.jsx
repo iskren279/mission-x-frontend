@@ -13,8 +13,8 @@ function Navbar() {
             </div>
 
             <ul className="nav-links">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PROJECTS</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/project-library">PROJECTS</a></li>
                 <li><a href="#">TEACHERS</a></li>
             </ul>
         <div className="rightSide">
@@ -25,7 +25,7 @@ function Navbar() {
     </div>
 
     <div className="profile">
-        <img src={ProfilePic} alt="Profile" />
+       <a href="/teacher-dashboard"><img src={ProfilePic} alt="Profile" /></a>
         <span>RAWIRI FLETCHER</span>
     </div>
 </div>
