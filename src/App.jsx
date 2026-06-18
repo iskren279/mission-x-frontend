@@ -7,10 +7,7 @@ import Footer from "./pages/projectLibrary/ProjectLibraryFooter";
 function App() {
   return (
     <>
-      <Navbar />
       <Outlet />
-      <Instructions />
-      <Footer />
     </>
   );
 }
