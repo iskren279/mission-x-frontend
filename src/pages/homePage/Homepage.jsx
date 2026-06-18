@@ -15,6 +15,8 @@ import group3 from "../../assets/Home/group3.png";
 import group4 from "../../assets/Home/group4.png";
 import classroom from "../../assets/Home/classroom.png";
 import star from "../../assets/Home/star.png";
+import Navbar from "../projectLibrary/ProjectLibraryNavbar";
+import Footer from "../projectLibrary/ProjectLibraryFooter"
 
 
 // These arrays/objects hold the page's content. Keeping the data separate
@@ -113,6 +115,8 @@ const Homepage = () => {
   
   // Everything returned below is JSX markup HTML DOM.
   return (
+    <>
+    <Navbar />
     <main className={styles["home-page"]}>
       {/* Hero: the big intro banner with the headline and call-to-action buttons. */}
       <section className={styles["home-hero"]}>
@@ -143,7 +147,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Offer: explains the programme and shows the rotating laptop showcase.
           The id="programme" lets the "Learn More" anchor jump down to here. */}
       <section className={styles["home-offer"]} id="programme">
@@ -305,6 +309,8 @@ const Homepage = () => {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   );
 };
 

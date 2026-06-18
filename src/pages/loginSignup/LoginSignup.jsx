@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const LoginSignup = () => {
   const [activeTab, setActiveTab] = useState("signup");
 
+
   // Navigate to the home page when the close button is clicked.
   const navigate = useNavigate();
 
