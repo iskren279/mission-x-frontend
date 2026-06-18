@@ -25,7 +25,7 @@ function Navbar() {
     </div>
 
     <div className="profile">
-       <a href="/teacher-dashboard"><img src={ProfilePic} alt="Profile" /></a>
+       <a href="/teacher-profiles"><img src={ProfilePic} alt="Profile" /></a>
         <span>RAWIRI FLETCHER</span>
     </div>
 </div>
