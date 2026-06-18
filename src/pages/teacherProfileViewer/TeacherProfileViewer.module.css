@@ -38,6 +38,7 @@
   height: 30.43%;
 }
 .box2 {
+  display: flex;
   background-color: #FFFFFF;
   border: 2px #E2DFDF;
   border-radius: 30px;
@@ -46,8 +47,14 @@
   margin-right: 16.93vw;
   height: 69.6vh;
   width: 42.71vw;
-  text-align: center;
-  position: relative
+}
+.con {
+  height: 100%;
+  width: 50%;
+  background-color: #E5AB2C;
+}
+.jas {
+  
 }
 .container1 {
 background-color: #eeeeee;

@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 function App() {
   return ( 
   <>
-  <h1>Start MissionX Here</h1>
+  {/* <h1>Start MissionX Here</h1> */}
   <Outlet/>
   </>
   )
