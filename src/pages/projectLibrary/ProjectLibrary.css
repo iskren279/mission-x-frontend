@@ -225,6 +225,23 @@
     color: #666;
 }
 
+.filter-section label {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+.filter-section input[type="checkbox"] {
+    margin: 0;
+}
+
 /* Project Grid */
 
 .project-grid {

@@ -1,0 +1,121 @@
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .closeIcon {
+    width: 26px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .closeBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .closeBtn img {
+    width: 26px;
+  }
+  
+  
+  .tabs {
+    justify-content: center;
+    color: #A5A5A5;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #707070;
+    cursor: pointer;
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
+  }
+  .tabs button:first-child:hover {  
+    font-weight: 700;
+    border-bottom: 3px solid #43C0F6;
+  }
+  
+  .tabs button:last-child:hover {  
+    font-weight: 700;
+    border-bottom: 3px solid #ff4fa3;
+  }
+  
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .column {
+    flex: 1;
+    background: #f7f7f710;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .divider {
+    width: 2px;
+    background: #e0e0e0;
+  }
+  
+  .illustration {
+    width: 140px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-family: "Nunito", sans-serif;
+    color: #707070;
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+  }
+  
+  .form input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .submitBtn {
+    width: 175px;
+    align-self: center;
+    margin-top: 10px;
+    padding: 14px;
+    background: #ff4fa3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
