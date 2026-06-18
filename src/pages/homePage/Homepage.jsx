@@ -22,6 +22,7 @@ import star from "../../assets/Home/star.png";
 
 
 // the four learning areas shown in the offer section.
+// "What will students create?" section.
 const learningAreas = [
   { title: "Animation", icon: animationIcon },
   { title: "Games", icon: gamesIcon },
@@ -29,10 +30,10 @@ const learningAreas = [
   { title: "Augmented Reality", icon: augRealityIcon },
 ];
 
-// The laptop images that cycle through the showcase carousel.
+// The laptop images that slides in the carousel.
 const showcaseSlides = [laptop1, laptop2, laptop3, laptop4];
 
-// The four skill cards in the "more than writing code" section.
+// The four skill cards displayed in the skills section.
 const competencyCards = [
   { image: group1, title: "Creativity & Individuality" },
   { image: group3, title: "Critical Thinking & Problem Solving" },
@@ -40,7 +41,7 @@ const competencyCards = [
   { image: group2, title: "Technology & Future Focus" },
 ];
 
-// The five bullet points shown only when the "Key Competencies" tab is active.
+// Information displayed when the "Key Competencies" tab is selected.
 const keyCompetencies = [
   {
     title: "THINKING",
@@ -64,7 +65,7 @@ const keyCompetencies = [
   },
 ];
 
-// The tab strip in the programme section. Each entry carries the text that gets swapped into the panel below when its tab is clicked.
+// Data for each tab in the programme section when a user clicks a tab, it will displays the matching heading.
 const programmeTabs = [
   {
     id: "learning-pathways",
@@ -98,10 +99,11 @@ const programmeTabs = [
 
 const Homepage = () => {
 
-  // Which carousel image is showing. Starts at 0 (the first one). CallingsetActiveSlide rerender the component with the new index.
+  // Keeps track of which slideshow image is currently visible starts at (0) with the first image in the array.
+  // When setActiveSlide() runs, it will update the screen automatically.
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Which programme tab is selected. We default to the "key-competencies" tab.
+  // Stores the currently selected tab when page first loads, the key competencies will selected by default.
   const [activeTab, setActiveTab] = useState("key-competencies");
 
   // looking for data of the currently selected tab or nullish coalescing (??) operator to return undefined if not found
@@ -109,7 +111,7 @@ const Homepage = () => {
 
 
   
-  // Everything returned below is JSX markup that turns into DOM.
+  // Everything returned below is JSX markup HTML DOM.
   return (
     <main className={styles["home-page"]}>
       {/* Hero: the big intro banner with the headline and call-to-action buttons. */}
@@ -150,14 +152,13 @@ const Homepage = () => {
           <p>
             The Creative Problem Solving programme is a series of digital
             creation projects aimed to encourage self-motivation and student
-            agency, designed by New Zealand&apos;s leading IT industry experts and
+            agency, designed by New Zealand's leading IT industry experts and
             schools.
           </p>
 
           <h3>What will students create?</h3>
-          {/* Loop over the learningAreas data to render one chip per item.
-              React needs a unique "key" on each looped element so it can track
-              them efficiently — we use the title since it's unique here. */}
+          {/* Create one card for each item inside learningAreas .map() loops through the array
+           and creates a new JSX element for every object. */}
           <div className={styles["home-chip-grid"]}>
             {learningAreas.map((item) => (
               <div key={item.title} className={styles["home-chip-card"]}>
@@ -172,8 +173,7 @@ const Homepage = () => {
         </div>
 
         <div className={styles["home-offer_visual"]}>
-          {/* The carousel: we only ever render one image — whichever index
-              activeSlide currently points at. The dots below change that index. */}
+          {/* The carousel: only shows one image of current index activeSlide is pointing at. The dots below change that index.*/}
           <div className={styles["home-showcase"]}>
             <img
               src={showcaseSlides[activeSlide]}
@@ -181,9 +181,7 @@ const Homepage = () => {
               className={styles["home-showcase_image"]}
             />
           </div>
-          {/* One clickable dot per slide. Clicking a dot sets activeSlide to its
-              index, which swaps the image above. The ternary on className adds an
-              "--active" modifier to whichever dot matches the current slide. */}
+          {/* Create one navigation button for each slide when a button is clicked, it will update the screen automatically.*/}
           <div className={styles["home-showcase_dots"]}>
             {showcaseSlides.map((slide, index) => (
               <button
@@ -255,8 +253,8 @@ const Homepage = () => {
           <h3 className={styles["home-competency-panel_title"]}>{currentTab.heading}</h3>
           <p className={styles["home-competency-panel_intro"]}>{currentTab.intro}</p>
 
-          {/* Conditional render: the &&  means "only show the list when the
-              key-competencies tab is active". On other tabs this is skipped. */}
+          {/* Conditional render: the &&  means "only show when the condition is true if 
+           activeTab is equal to key-competencies then show the list else hide the list. */}
           {activeTab === "key-competencies" && (
             <ul className={styles["home-competency-list"]}>
               {keyCompetencies.map((item) => (
@@ -276,7 +274,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* CTA: the closing "what are you waiting for?" banner with sign-up button. */}
+      {/* Call to action section: the closing "what are you waiting for?" banner with sign-up button. */}
       <section className={styles["home-cta"]}>
         <div className={styles["home-cta_inner"]}>
           <img
@@ -310,7 +308,7 @@ const Homepage = () => {
   );
 };
 
-// Make this component available to the router so it can be shown at "/".
+
 export default Homepage;
 
 
