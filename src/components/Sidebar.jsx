@@ -12,6 +12,8 @@ import quizIcon from "../assets/studentDashboard/takeTheQuiz.png";
 import arrowLeft from "../assets/arrowLeft.png";
 
 export default function Sidebar() {
+  // ********************SHOW THIS*********************
+  // DYNAMIC RENDERING*****
   const menuItems = [
     {
       name: "Learning Objectives",
@@ -55,6 +57,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation */}
+      {/* ******************SHOW THIS ********************** */}
       <nav className={styles.menu}>
         {menuItems.map((item) => (
           <div key={item.name} className={styles.menuItemWrapper}>
@@ -67,6 +70,7 @@ export default function Sidebar() {
               <span>{item.name}</span>
             </button>
 
+            {/* ************CONDITIONAL RENDERING- SHOW THIS************************* */}
             {item.name === "Take the Quiz" && (
               <div className={styles.arrowContainer}>
                 <img

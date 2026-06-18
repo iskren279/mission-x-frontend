@@ -26,6 +26,7 @@ export default function Navbar() {
 
         <div className={styles.progressCircle}>1</div>
 
+        {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
         <div className={styles.progressDots}>
           {[...Array(15)].map((_, index) => (
             <div key={index} className={styles.dot}></div>
