@@ -1,0 +1,44 @@
+/* Container holding the entire screen page */
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Forces the app to lock exactly to the full viewport height */
+  width: 100vw;
+  overflow: hidden; /* Prevents ugly double scrollbars on the screen */
+}
+
+/* Row directly underneath the navbar wrapper */
+.mainLayout {
+  display: flex;
+  flex: 1; /* Automatically takes up all remaining vertical space down to the screen edge */
+  width: 100%;
+}
+
+/* The content area to the right of the sidebar */
+.contentArea {
+  flex: 1;
+  background-color: #bce6f4; /* Light sky blue backdrop panel */
+  padding: 40px;
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center; /* Centers the card horizontally */
+  align-items: flex-start; /* Allows only the content area to scroll if your content gets long */
+}
+
+.joinScratch {
+  color: #d63384;
+  font-weight: bold;
+}
+
+.instructionCard {
+  background-color: #d9f0ff;
+  padding: 40px 60px;
+  border-radius: 24px;
+}
+
+.img {
+  width: 100%;
+  max-width: 600px;
+  margin: 25px 0;
+}
