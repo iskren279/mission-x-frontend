@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import styles from "./Instructions.module.css";
 import Sidebar from "../../../components/Sidebar";
 import Navbar from "../../../components/Navbar";
-=======
-
->>>>>>> c3b2a985e84f799e7b953f9207977e16809ae29c
 
 export default function Instructions() {
   const menuItems = [
@@ -18,39 +14,8 @@ export default function Instructions() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className={styles.app}>
       <Sidebar />
-=======
-   
-
-      {/* MAIN */}
-      <main className="main">
-        <div className="card">
-          <h1>1. JOIN SCRATCH</h1>
-
-          <p>
-            If you haven't used Scratch before, you will need to join Scratch
-            first.
-          </p>
-
-          <p>
-            Go to <b>scratch.mit.edu</b> and click <b>Join Scratch</b>.
-          </p>
-
-          <img
-            src="https://scratch.mit.edu/images/scratch-og.png"
-            className="img"
-            alt="Scratch"
-          />
-
-          <p>Follow the instructions to complete signup.</p>
-        </div>
-      </main>
-    </div>
-  );
-}
->>>>>>> c3b2a985e84f799e7b953f9207977e16809ae29c
 
       <div className={styles.pageContent}>
         <Navbar />
