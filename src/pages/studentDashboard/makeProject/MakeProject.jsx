@@ -1,14 +1,15 @@
 import React from "react";
-import Header from "./component/Header";
-import Sidebar from "./component/Sidebar";
-import Footer from "./component/Footer";
-import styles from "../../../sharedComponents/MakeProject.module.css";
+import Navbar from "../../../components/Navbar";
+import Sidebar from "../../../components/Sidebar";
+import Footer from "../../../components/Footer";
+
+import styles from "../../../components/MakeProject.module.css";
 
 export default function MakeProject() {
   return (
     <div style={{ padding: "20px" }}>
       <h1>MAKE PROJECT PAGE</h1>
-      <Header />
+      <header />
       <div className={styles.imageContainer}>
         <img
           src="/images/projects/Project01-obj3.png"
