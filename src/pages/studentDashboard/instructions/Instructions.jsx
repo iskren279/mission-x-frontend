@@ -1,38 +1,44 @@
+import styles from "./Instructions.module.css";
+import Sidebar from "../../../components/Sidebar";
+import Navbar from "../../../components/Navbar";
+
 export default function Instructions() {
   return (
-    <div className={styles.pageContent}>
-      <Navbar />
+    <div className={styles.app}>
+      <Sidebar />
 
-      <main className={styles.main}>
-        <div className={styles.card}>
-          <div className={styles.content}>
-            <h1>1. JOIN SCRATCH</h1>
+      <div className={styles.pageContent}>
+        <Navbar />
 
-            <p>
-              If you haven't used Scratch before, you will need to join Scratch
-              first.
-            </p>
+        <main className={styles.main}>
+          <div className={styles.card}>
+            <div className={styles.content}>
+              <h1>1. JOIN SCRATCH</h1>
 
-            <p>
-              Go to https://scratch.mit.edu. Click on{" "}
-              <span className={styles.joinScratch}>Join Scratch</span>.
-            </p>
+              <p>
+                If you haven't used Scratch before, you will need to join
+                Scratch first.
+              </p>
 
-            <img
-              src="/images/projects/project01-instructions.png"
-              alt="Project Instructions"
-              className={styles.img}
-            />
+              <p>
+                Go to https://scratch.mit.edu. Click on{" "}
+                <span className={styles.joinScratch}>Join Scratch</span>.
+              </p>
+              <img
+                src="public/images/projects/project01-instructions.png"
+                alt="Project Instructions"
+                className={styles.img}
+              />
+              <p>
+                Follow the instructions to join. You will need a username and
+                password that you will remember.
+              </p>
+            </div>
 
-            <p>
-              Follow the instructions to join. You will need a username and
-              password that you will remember.
-            </p>
+            <div className={styles.cardFooter}>© LevelUp Works 2020</div>
           </div>
-
-          <div className={styles.cardFooter}>© LevelUp Works 2020</div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
