@@ -50,8 +50,12 @@
     padding-bottom: 6px;
     border-bottom: 3px solid transparent;
   }
+  .tabs button:first-child:hover {  
+    font-weight: 700;
+    border-bottom: 3px solid #43C0F6;
+  }
   
-  .activeTab:hover {  
+  .tabs button:last-child:hover {  
     font-weight: 700;
     border-bottom: 3px solid #ff4fa3;
   }
