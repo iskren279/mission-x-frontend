@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+  .osf {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.nf {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #eeeeee;
+  height: 76.93vh;
+}
+.box1 {
+  background-color: #FFFFFF;
+  border: 2px #E2DFDF;
+  border-radius: 30px;
+  margin-top: 10.59vh;
+  margin-left: 17.4vw;
+  margin-right: 1.825vw;
+  margin-bottom: 3.37vh;
+  height: 56.21vh;
+  width: 18.8vw;
+  text-align: center;
+}
+.btn {
+  border: solid 1px #71C7F4;
+  color: #71C7F4;
+  margin-bottom: 12%;
+  width: 55%;
+  background-color: transparent;
+  border-radius: 7px;
+}
+.teach {
+  margin-top: 15%;
+  margin-bottom: 25%;
+  height: 30.43%;
+}
+.box2 {
+  display: flex;
+  background-color: #FFFFFF;
+  border: 2px #E2DFDF;
+  border-radius: 30px;
+  margin-top: 10.59vh;
+  margin-left: 1.825vw;
+  margin-right: 16.93vw;
+  height: 69.6vh;
+  width: 42.71vw;
+}
+.con {
+  height: 100%;
+  width: 50%;
+}
+.jas {
+  position: absolute;
+  margin-left: 10.7%;
+  margin-right: 10.7%;
+  margin-top: 2%;
+  font-size: 6vh;
+}
+.temp {
+  margin-top: 40%;
+  margin-left: 10%;
+  padding: 7%;
+  color: #B0B0B0;
+}
+.temp1 {
+  /* margin-top: 5%; */
+  margin-left: 10%;
+  padding: 7%;
+  color: #707070;
+}
+.container1 {
+background-color: #eeeeee;
+height: 16.81vh;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+.btn1 {
+  background-color: #F91C85;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin-top: 6.74vh;
+  width: 10.42vw;
+  height: 3vh;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  align-content: center;
+}
+.btn2 {
+  background-color: #E5AB2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 6.74vh;
+  margin-left: 3.125vw;
+  margin-right: 16.93vw;
+  width: 11.46vw;
+  height: 3vh;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  align-content: center;
+}

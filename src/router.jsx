@@ -11,6 +11,7 @@ import MakeProject from "./pages/studentDashboard/makeProject/MakeProject";
 import SubmitProject from "./pages/studentDashboard/submitProject/SubmitProject";
 import VideoTutorial from "./pages/studentDashboard/videoTutorial/VideoTutorial";
 import TeacherDashboard from "./pages/teacherDashboard/TeacherDashboard";
+import TeacherProfileViewer from "./pages/teacherProfileViewer/TeacherProfileViewer.jsx";
 import HelpRequests from "./pages/teacherDashboard/helpRequests/HelpRequests";
 import ProgressTracker from "./pages/teacherDashboard/progressTracker/ProgressTracker";
 import ProjectSubmissions from "./pages/teacherDashboard/projectSubmissions/ProjectSubmissions";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 path : "/student-profile-viewer",
                 Component : StudentProfileViewer,
             },
+             {
+                path : "/teacher-profiles",
+                Component : TeacherProfileViewer,
+             },
             {
                 path : "/student-dashboard",
                 Component : StudentDashboard,
