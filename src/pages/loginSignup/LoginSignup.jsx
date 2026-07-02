@@ -33,7 +33,7 @@ const LoginSignup = () => {
                 {/* Tabs */}
       <div className={styles.tabs}>
         <button
-          className={activeTab=== "login" ? styles.activeTab : ""}
+          className={activeTab === "login" ? styles.activeTab : ""}
           onClick={() => setActiveTab("login")}
         >
           LOG IN
@@ -46,7 +46,6 @@ const LoginSignup = () => {
           SIGN UP
         </button>
       </div>
-
           <form className={styles.form}>
             {activeTab === "signup" && <input type="text" placeholder="Full name" />}
             <input type="email" placeholder="Email Address" />
