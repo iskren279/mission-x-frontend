@@ -88,11 +88,13 @@
     background: linear-gradient(180deg, #ff4ca8 0%, #e91b8f 100%);
     color: #fff;
     border-color: transparent;
+    font-family: "Nunito", sans-serif;
   }
   
   .btn-secondary {
     background: #fff;
-    color: #42b8ea;
+    color: #707070;
+    font-family: "Nunito", sans-serif;
   }
   
   .subscription-info {
