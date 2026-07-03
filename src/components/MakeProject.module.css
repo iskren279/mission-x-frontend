@@ -1,0 +1,36 @@
+.userContainer {
+  background-color: #ffffff80;
+  border-radius: 30px;
+  /* This forms the rounded container the cards sit in */
+
+  width: 100%;
+  /* It will take up 100% of the width of the parent */
+
+  margin: 40px;
+  padding: 50px;
+  /* This has a margin of 40, which pushes it in from the edges of the body container */
+  /* The padding pushes the cards in from the edge of the rounded container */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  /* Turning the rounded container into a css grid */
+  /* auto-fit, tells the grid to create as many columns as possible   */
+  /* while respecting the minimum and maximum widths */
+  /* 1fr = a fraction of the available space */
+
+  grid-template-rows: repeat(auto-fill, minmax(200px, max-content));
+  /* Auto-fill means that rows will continue to be created to fit the content  */
+  /* minmax means that the min height of the row will be 200px */
+  /* ...and the max will be the height of the content in that row (if something is > 200px) */
+  
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  /* column-gap creates space between the columns each card sits in */
+
+  overflow: scroll;
+  overflow-x: hidden;
+  /* If there are more cards than can fit in the rounded container */
+  /* Then the ones that would extend below are cropped off */
+  /* Then a scroll is added so that you can scroll to see the remaining cards */
+}

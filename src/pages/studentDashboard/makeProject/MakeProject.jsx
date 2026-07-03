@@ -7,7 +7,7 @@ import styles from "../../../components/MakeProject.module.css";
 
 export default function MakeProject() {
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ display:"flex",height:"100vh",backgroundColor:"#B2E4FA",padding: "20px",borderRadius:"30px" }}>
       <h1>MAKE PROJECT PAGE</h1>
       <header />
       <div className={styles.imageContainer}>
@@ -24,8 +24,8 @@ export default function MakeProject() {
         />
       </div>
 
-      <Sidebar />
-      <Footer />
+      {/* <Sidebar />
+      <Footer /> */}
     </div>
   );
 }

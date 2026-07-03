@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import Footer from "../../components/Footer";
 
-export default function StudentDashboard() {
+function StudentDashboard() {
   return (
     <>
       <Navbar />
