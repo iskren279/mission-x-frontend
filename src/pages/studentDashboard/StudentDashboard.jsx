@@ -1,5 +1,5 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
@@ -9,16 +9,11 @@ function StudentDashboard() {
   return (
     <>
       <Navbar />
-      <Sidebar />
-
-      <main>
-        <div>StudentDashboard</div>
+      <main style={{ display: "flex" }}>
+        <Sidebar />
         <Outlet />
       </main>
-
       <Footer />
     </>
   );
 }
-
-export default StudentDashboard;
