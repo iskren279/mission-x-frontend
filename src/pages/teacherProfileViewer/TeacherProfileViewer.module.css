@@ -59,26 +59,25 @@
 }
 .con {
   height: 100%;
-  width: 50%;
+  width: 100%;
+  /* background-color: #71C7F4; */
 }
 .jas {
   position: absolute;
   margin-left: 10.7%;
-  margin-right: 10.7%;
+  margin-right: 10.7%; 
   margin-top: 2%;
-  font-size: 6vh;
+  font-size: 3vw;
 }
 .temp {
-  margin-top: 40%;
-  margin-left: 10%;
-  padding: 7%;
   color: #B0B0B0;
 }
 .temp1 {
-  /* margin-top: 5%; */
   margin-left: 10%;
-  padding: 7%;
+  padding: 2vw;
   color: #707070;
+  font-size: 1.3vw;
+  overflow: hidden;
 }
 .container1 {
 background-color: #eeeeee;

@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# dotenv
+.env
+
+# backendTemp folder did not know were we were putting it
+backendTemp
