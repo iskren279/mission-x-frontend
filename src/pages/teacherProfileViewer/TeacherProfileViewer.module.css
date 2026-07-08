@@ -43,8 +43,8 @@
 }
 .teach {
   margin-top: 15%;
-  margin-bottom: 25%;
-  height: 30.43%;
+  margin-bottom: 10%;
+  height:15vh;
 }
 .box2 {
   display: flex;
@@ -69,10 +69,7 @@
   margin-top: 2%;
   font-size: 3vw;
 }
-.temp {
-  color: #B0B0B0;
-}
-.temp1 {
+.insideText {
   margin-left: 10%;
   padding: 2vw;
   color: #707070;
