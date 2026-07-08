@@ -58,23 +58,29 @@
   width: 42.71vw;
 }
 .con {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   /* background-color: #71C7F4; */
 }
 .jas {
-  position: absolute;
-  margin-left: 10.7%;
-  margin-right: 10.7%; 
-  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
   font-size: 3vw;
 }
+.textSideBySide{
+  display: flex;
+}
 .insideText {
-  margin-left: 10%;
+  margin-left: 2%;
   padding: 2vw;
   color: #707070;
   font-size: 1.3vw;
-  overflow: hidden;
+  overflow: visible;
+  width: 40%;
 }
 .container1 {
 background-color: #eeeeee;

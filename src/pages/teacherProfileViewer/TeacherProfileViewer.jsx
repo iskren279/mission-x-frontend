@@ -10,16 +10,20 @@ export default function TeacherProfileViewer() {
   useEffect(() => {
     fetch(`http://localhost:4000/teachers`)
       .then((res) => res.json())
-      .then((data) => setTeacher(...data))
-    }, []);
-    console.log(teacher)
+      .then((data) => setTeacher(...data));
+  }, []);
+  console.log(teacher);
 
   return (
     <div>
       <Navbar />
       <div className={styles.container}>
         <div className={styles.box1}>
-          <img src={teacher.profile_pic} alt="teacher picture" className={styles.teach}/> 
+          <img
+            src={teacher.profile_pic}
+            alt="teacher picture"
+            className={styles.teach}
+          />
           <br />
           <button className={`${styles.btn} ${styles.osf}`}>
             EDIT PROFILE
@@ -33,42 +37,39 @@ export default function TeacherProfileViewer() {
         </div>
         <div className={styles.box2}>
           <div className={styles.con}>
-                  <h1 className={`${styles.jas} ${styles.nf}`}>
-                    {teacher.name}
-                  </h1>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <h3 className={`${styles.insideText} ${styles.nf}`}>
-              School
-            </h3>
-            <h3 className={`${styles.insideText} ${styles.nf}`}>Date of Birth</h3>
-            <h3 className={`${styles.insideText} ${styles.nf}`}>Contact Number</h3>
-            <h3 className={`${styles.insideText} ${styles.nf}`}>Email Address</h3>
+            <h1 className={`${styles.jas} ${styles.nf}`}>{teacher.name}</h1>
+            <div className={`${styles.textSideBySide}`}>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>School</h3>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                {teacher.school}
+              </h3>
+            </div>
+
+            <div className={`${styles.textSideBySide}`}>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                Date of Birth
+              </h3>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                {teacher.date_of_birth}
+              </h3>
+            </div>
+            <div className={`${styles.textSideBySide}`}>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                Contact Number
+              </h3>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                {teacher.contact_number}
+              </h3>
+            </div>
+            <div className={`${styles.textSideBySide}`}>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                Email Address
+              </h3>
+              <h3 className={`${styles.insideText} ${styles.nf}`}>
+                {teacher.email}
+              </h3>
+            </div>
           </div>
-
-
-              <div className={styles.con}>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <h3 className={`${styles.insideText} ${styles.insideText1} ${styles.osf}`}>
-                  {teacher.school}
-                </h3>
-                <h3 className={`${styles.insideText} ${styles.osf}`}>
-                  {teacher.date_of_birth}
-                </h3>
-                <h3 className={`${styles.insideText} ${styles.osf}`}>
-                  {teacher.contact_number}
-                </h3>
-                <h3 className={`${styles.insideText} ${styles.osf}`}>
-                  {teacher.email}
-                </h3>
-              </div>
         </div>
       </div>
       <div className={styles.container1}>
