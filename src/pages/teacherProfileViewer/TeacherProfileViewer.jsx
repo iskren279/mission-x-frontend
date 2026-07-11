@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useParams } from "react-router";
 import styles from "./TeacherProfileViewer.module.css";
 import Navbar from "../projectLibrary/ProjectLibraryNavbar";
 import Footer from "../projectLibrary/ProjectLibraryFooter";
@@ -6,13 +6,23 @@ import { useState, useEffect } from "react";
 
 export default function TeacherProfileViewer() {
   const [teacher, setTeacher] = useState([]);
+  const {teacher_id} = useParams()
 
   useEffect(() => {
-    fetch(`http://localhost:4000/teachers`)
+    fetch(`http://localhost:4000/teachers/${teacher_id}`)
       .then((res) => res.json())
       .then((data) => setTeacher(...data));
   }, []);
-  console.log(teacher);
+
+const d = new Date(teacher.date_of_birth);
+console.log(d)
+const options = {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+};
+let dob = d.toLocaleDateString('en-NZ', options);
+console.log(dob)
 
   return (
     <div>
@@ -50,7 +60,7 @@ export default function TeacherProfileViewer() {
                 Date of Birth
               </h3>
               <h3 className={`${styles.insideText} ${styles.nf}`}>
-                {teacher.date_of_birth}
+                {dob}
               </h3>
             </div>
             <div className={`${styles.textSideBySide}`}>
