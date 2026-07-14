@@ -1,3 +1,6 @@
+@import url('https://googleapis.com');
+
+
 .home-page {
     color: #4f4f4f;
     background: #fff;
@@ -27,16 +30,18 @@
     max-width: 588px;
   }
   
-  .home-hero_content h1 {
-    margin: 0;
-    max-width: 588px;
-    font-family: "Nunito", sans-serif;
-    font-size: clamp(2.4rem, 3.125vw, 3.75rem);
-    font-weight: 900;
-    line-height: 0.97;
-    letter-spacing: -0.01em;
-    color: #4f4f4f;
-  }
+.home-hero_content h1 {
+  margin: 0;
+  max-width: 588px;
+  font-family: "Nunito", sans-serif;
+  font-size: 60px; /* match XD */
+  font-weight: 800;
+  line-height: 1.08; /* match XD */
+  letter-spacing: 0; /* XD default */
+  color: #656565;
+  opacity: 1;
+}
+
   
   .highlight {
     color: #32c5f4;
@@ -50,6 +55,7 @@
     line-height: 1.17;
     font-weight: 400;
     color: #4d4d4d;
+    opacity: 100%;
   }
   
   .home-hero_actions {
@@ -73,6 +79,7 @@
     padding: 0.48rem 1rem;
     border-radius: 5px;
     border: 2px solid #42b8ea;
+    font-family: "Nunito", sans-serif;
     font-size: 0.66rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -89,13 +96,13 @@
   
   .btn-secondary {
     background: #fff;
-    color: #42b8ea;
+    color: #707070;
   }
   
   .subscription-info {
     max-width: 126px;
     margin-top: 0.15rem;
-    font-size: 0.48rem;
+    font-size: 0.58rem;
     line-height: 1.2;
     text-align: center;
     color: #9aa7b5;
@@ -119,9 +126,9 @@
   }
   
   .home-offer_copy h2 {
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito Black", sans-serif;
     font-size: clamp(1.75rem, 2.19vw, 2.625rem);
-    font-weight: 700;
+    font-weight: 520;
     letter-spacing: 0.02em;
   }
   
@@ -138,8 +145,8 @@
   
   .home-offer_copy h3 {
     margin-top: 2rem;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
+    font-family: "Nunito Black", sans-serif;
+    font-weight: 520;
     font-size: 1.7rem;
   }
   
@@ -214,7 +221,7 @@
     text-align: center;
     font-family: "Nunito", sans-serif;
     font-size: clamp(1.15rem, 1.56vw, 1.875rem);
-    font-weight: 700;
+    font-weight: 520;
     line-height: 1.2;
     color: #4f4f4f;
   }
@@ -307,9 +314,9 @@
   
   .home-competency-panel_title {
     margin: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito Black", sans-serif;
     font-size: clamp(1.3rem, 1.67vw, 2rem);
-    font-weight: 700;
+    font-weight: 520;
     color: #4f4f4f;
   }
   
@@ -386,9 +393,9 @@
   
   .home-cta_title {
     margin: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito Black", sans-serif;
     font-size: clamp(1.6rem, 2.19vw, 2.625rem);
-    font-weight: 700;
+    font-weight: 520;
     color: #4f4f4f;
   }
   
