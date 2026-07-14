@@ -17,78 +17,76 @@ import ProjectSubmissions from "./pages/teacherDashboard/projectSubmissions/Proj
 import StudentProfiles from "./pages/teacherDashboard/studentProfiles/StudentProfiles";
 
 const router = createBrowserRouter([
-    {
-        path : "/",
-        Component : App,
-        children : [
-            {
-                index: true,
-                Component: Home,
-            }, 
-            {
-                path : "/login",
-                Component : Login,
-            },
-            {
-                path : "/project-library",
-                Component : ProjectLibrary,
-            },
-            {
-                path : "/student-profile-viewer",
-                Component : StudentProfileViewer,
-            },
-            {
-                path : "/student-dashboard",
-                Component : StudentDashboard,
-                children : [
-                    {
-                        index : true,
-                        Component : LearningObjectives,
-                    },
-                    {
-                        path : "instructions",
-                        Component : Instructions,
-                    },
-                    {
-                        path : "make-project",
-                        Component : MakeProject,
-                    },
-                    {
-                        path : "submit-project",
-                        Component : SubmitProject,
-                    },
-                    {
-                        path : "video-tutorial",
-                        Component : VideoTutorial,
-                    },
-                ],
-            },
-            {
-                path : "/teacher-dashboard",
-                Component : TeacherDashboard,
-                children : [
-                    {
-                        index : true,
-                        Component : ProgressTracker,
-                    },
-                    {
-                        path : "help-requests",
-                        Component : HelpRequests,
-                    },
-                    {
-                        path : "project-submissions",
-                        Component : ProjectSubmissions,
-                    },
-                    { 
-                        path : "student-profiles",
-                        Component : StudentProfiles,
-                    },
-                ],
-            },
+  {
+    path: "/",
+    Component: App,
+    children: [
+      {
+        index: true,
+        Component: Home,
+      },
+      {
+        path: "/login",
+        Component: Login,
+      },
+      {
+        path: "/project-library",
+        Component: ProjectLibrary,
+      },
+      {
+        path: "/student-profile-viewer",
+        Component: StudentProfileViewer,
+      },
+      {
+        path: "/student-dashboard",
+        Component: StudentDashboard,
+        children: [
+          {
+            index: true,
+            Component: LearningObjectives,
+          },
+          {
+            path: "instructions",
+            Component: Instructions,
+          },
+          {
+            path: "make-project",
+            Component: MakeProject,
+          },
+          {
+            path: "submit-project",
+            Component: SubmitProject,
+          },
+          {
+            path: "video-tutorial",
+            Component: VideoTutorial,
+          },
         ],
-
-
-    }
-])
+      },
+      {
+        path: "/teacher-dashboard",
+        Component: TeacherDashboard,
+        children: [
+          {
+            index: true,
+            Component: ProgressTracker,
+          },
+          {
+            path: "help-requests",
+            Component: HelpRequests,
+          },
+          {
+            path: "project-submissions",
+            Component: ProjectSubmissions,
+          },
+          {
+            path: "student-profiles",
+            Component: StudentProfiles,
+          },
+        ],
+      },
+    ],
+  },
+]);
 
 export default router;

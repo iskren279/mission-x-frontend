@@ -3,16 +3,6 @@ import Sidebar from "../../../components/Sidebar";
 import Navbar from "../../../components/Navbar";
 
 export default function Instructions() {
-  const menuItems = [
-    "Learning Objectives",
-    "Instructions",
-    "Video Tutorial",
-    "Make Project",
-    "Submit Project",
-    "Bonus Challenge",
-    "Take the Quiz",
-  ];
-
   return (
     <div className={styles.app}>
       <Sidebar />
@@ -34,11 +24,13 @@ export default function Instructions() {
                 Go to https://scratch.mit.edu. Click on{" "}
                 <span className={styles.joinScratch}>Join Scratch</span>.
               </p>
+
               <img
-                src="public/images/projects/project01-instructions.png"
+                src="/images/projects/project01-instructions.png"
                 alt="Project Instructions"
                 className={styles.img}
               />
+
               <p>
                 Follow the instructions to join. You will need a username and
                 password that you will remember.

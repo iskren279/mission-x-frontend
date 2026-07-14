@@ -1,19 +1,19 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-
-import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 export default function StudentDashboard() {
   return (
-    <>
+    <div>
       <Navbar />
-      <main style={{ display: "flex" }}>
+
+      <div>
         <Sidebar />
-        <Outlet />
-      </main>
-      <Footer />
-    </>
+
+        <main>
+          <Outlet />
+        </main>
+      </div>
+    </div>
   );
 }

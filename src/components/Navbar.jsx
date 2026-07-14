@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import levelUpLogo from "../assets/Navbar/LevelUpWorks-blue.png";
-import nzFlag from "../assets/navbar/NZFlag.png";
-import maoriFlag from "../assets/navbar/MaoriFlag.png";
+import nzFlag from "../assets/Navbar/NZFlag.png";
+import maoriFlag from "../assets/Navbar/MaoriFlag.png";
 
 export default function Navbar() {
   return (

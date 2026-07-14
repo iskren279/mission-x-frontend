@@ -1,0 +1,66 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: #8fd3f4;
+}
+
+.pageContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.content {
+  flex: 1;
+  background: #d9f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.videoWrapper {
+  width: 720px;
+  height: 405px;
+  background: #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cardFooter {
+  background: white;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid #e5e5e5;
+
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
