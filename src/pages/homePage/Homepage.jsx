@@ -51,7 +51,7 @@ const keyCompetencies = [
   },
   {
     title: "DISCERNING CODES",
-    text: "Analysing language, symbols, and texts in order to understand and make sense of the codes in which knowledge is expressed.",
+    text: "Analyzing language, symbols, and texts in order to understand and make sense of the codes in which knowledge is expressed.",
   },
   {
     title: "SELF-MANAGEMENT",

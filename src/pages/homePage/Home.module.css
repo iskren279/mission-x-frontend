@@ -30,16 +30,18 @@
     max-width: 588px;
   }
   
-  .home-hero_content h1 {
+.home-hero_content h1 {
   margin: 0;
   max-width: 588px;
   font-family: "Nunito", sans-serif;
-  font-size: clamp(2.4rem, 3.125vw, 3.75rem);
-  font-weight: 520;
-  line-height: 0.97;
-  letter-spacing: -0.01em;
-  color: #656565; /* Dark gray for the main heading text */
+  font-size: 60px; /* match XD */
+  font-weight: 800;
+  line-height: 1.08; /* match XD */
+  letter-spacing: 0; /* XD default */
+  color: #656565;
+  opacity: 1;
 }
+
   
   .highlight {
     color: #32c5f4;
@@ -53,6 +55,7 @@
     line-height: 1.17;
     font-weight: 400;
     color: #4d4d4d;
+    opacity: 100%;
   }
   
   .home-hero_actions {
@@ -76,6 +79,7 @@
     padding: 0.48rem 1rem;
     border-radius: 5px;
     border: 2px solid #42b8ea;
+    font-family: "Nunito", sans-serif;
     font-size: 0.66rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -88,13 +92,11 @@
     background: linear-gradient(180deg, #ff4ca8 0%, #e91b8f 100%);
     color: #fff;
     border-color: transparent;
-    font-family: "Nunito", sans-serif;
   }
   
   .btn-secondary {
     background: #fff;
     color: #707070;
-    font-family: "Nunito", sans-serif;
   }
   
   .subscription-info {
