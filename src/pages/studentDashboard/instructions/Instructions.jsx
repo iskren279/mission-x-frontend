@@ -3,16 +3,6 @@ import Sidebar from "../../../components/Sidebar";
 import Navbar from "../../../components/Navbar";
 
 export default function Instructions() {
-  const menuItems = [
-    "Learning Objectives",
-    "Instructions",
-    "Video Tutorial",
-    "Make Project",
-    "Submit Project",
-    "Bonus Challenge",
-    "Take the Quiz",
-  ];
-
   return (
     <div className={styles.app}>
       <Sidebar />
