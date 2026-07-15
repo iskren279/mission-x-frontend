@@ -17,63 +17,125 @@ export default function LearningObjectives() {
       .catch((err) => console.log(err));
   }, []);
 
-  const content = {
-    __html: DOMPurify.sanitize(project?.description || ""),
+  const imageStyle = {
+    borderRadius: "30px",
+    transition: "transform 0.3s ease",
   };
 
   return (
     <>
-      <Navbar />
+      <div
+        style={{
+          display: "flex",
 
-      <div style={{ display: "flex" }}>
-        <Sidebar />
+          minHeight: "calc(120px)",
+        }}
+      >
+        <div
+          style={{
+            flex: 1,
+            padding: "30px",
+            backgroundColor: "#ffffff",
+          }}
+        >
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: "40px",
+              marginBottom: "20px",
+              color: "#7f5e5e",
+            }}
+          >
+            Explore Scratch blocks <br />
+          </h1>
+          <h4
+            style={{
+              textAlign: "center",
+              fontSize: "20px",
+              marginBottom: "20px",
+              color: "#b17070",
+            }}
+          >
+            Learn the basic function of some basic scratch blocks such as
+            "say""wait""go to"
+          </h4>
 
-        <div style={{ padding: "20px", flex: 1 }}>
-          <h1>Learning Objectives</h1>
-
-          <div className={styles.imageContainer}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "2px",
+            }}
+          >
             <img
               src="/images/projects/Project01-obj1.png"
               alt="obj1"
-              className={styles.projectImage}
+              style={imageStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(1.05)")
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
 
             <img
               src="/images/projects/Project01-obj2.png"
               alt="obj2"
-              className={styles.projectImage}
+              style={imageStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(.5)")
+              }
+              onMouseOut={(e) =>
+                (e.currentTarget.style.transform = "scale(.5)")
+              }
             />
 
             <img
               src="/images/projects/Project01-obj3.png"
               alt="obj3"
-              className={styles.projectImage}
+              style={imageStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(1.05)")
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
 
             <img
               src="/images/projects/Project01-obj4.png"
               alt="obj4"
-              className={styles.projectImage}
+              style={imageStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(.5)")
+              }
+              onMouseOut={(e) =>
+                (e.currentTarget.style.transform = "scale(.5)")
+              }
             />
 
             <img
               src="/images/projects/Project01-obj5.png"
               alt="obj5"
-              className={styles.projectImage}
+              style={imageStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(1.05)")
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             />
 
             <img
               src="/images/projects/Project01-obj6.png"
               alt="obj6"
-              className={styles.projectImage}
+              style={imageStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(.5)")
+              }
+              onMouseOut={(e) =>
+                (e.currentTarget.style.transform = "scale(.5)")
+              }
             />
           </div>
-
-          <div dangerouslySetInnerHTML={content}></div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }
