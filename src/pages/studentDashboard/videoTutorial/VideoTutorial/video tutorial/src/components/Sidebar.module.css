@@ -1,27 +1,55 @@
 .sidebar {
   width: 230px;
+  height: calc(100vh - 60px);
   background-color: #26b1ec;
+  transition: width 0.3s ease;
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
 
   box-sizing: border-box;
 }
 
+/* OPEN / CLOSED STATES */
+
+.open {
+  width: 230px;
+}
+
+.closed {
+  width: 70px;
+}
+
+/* Profile */
+
 .profileSection {
-  margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ffffff;
+  border: 2px solid white;
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
 }
+
+.closed .avatar {
+  width: 45px;
+  height: 45px;
+}
+
+/* Menu */
 
 .menu {
   display: flex;
@@ -32,38 +60,32 @@
 
 .menuItemWrapper {
   display: flex;
-  flex-direction: column; /* Stacks the arrow underneath the button */
-  align-items: flex-end; /* PUSHES THE ARROW TO THE RIGHT SIDE */
+  flex-direction: column;
+  align-items: flex-end;
   width: 100%;
   position: relative;
-}
-
-.arrowUnder {
-  width: 14px;
-  height: auto;
-  margin-top: 12px; /* Spacing directly below the text */
-  margin-right: 25px; /* Nudges it inward from the edge so it lines up with the text ends */
-  object-fit: contain;
 }
 
 .navItem {
   background: none;
   border: none;
-  color: #ffffff;
-  padding: 11px 20px; /* Perfect spacing sweet spot */
-  text-align: left;
+  color: white;
+
+  padding: 11px 20px;
+
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.8px;
+
   cursor: pointer;
+
   width: 100%;
+
   display: flex;
   align-items: center;
   gap: 12px;
-  transition: background-color 0.15s ease;
 }
 
-/* Active tab style (The darker blue block highlight) */
 .navItem.active {
   background-color: #1a9fd6;
 }
@@ -74,26 +96,33 @@
   object-fit: contain;
 }
 
-.arrowLeft {
-  position: absolute;
-  right: 15px;
-  bottom: -30px;
-  width: 12px;
-  height: auto;
-  width: 12px;
-  height: auto;
+/* Hide text when collapsed */
+
+.closed .navItem span {
+  display: none;
 }
 
+.closed .navItem {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Quiz arrow */
+
 .arrowContainer {
+  cursor: pointer;
+
   position: absolute;
-  right: -12px;
-  top: 150%;
+  right: -15px;
+  top: 200%;
   transform: translateY(-50%);
 
   width: 50px;
   height: 32px;
 
   background-color: #bce6f4;
+
   border-radius: 8px 0 0 8px;
 
   display: flex;
@@ -104,9 +133,15 @@
 .arrowLeft {
   width: 14px;
   height: 14px;
+}
 
-  margin: 0;
-  padding: 0;
+/* Footer */
 
-  position: static;
+.sidebarFooter {
+  margin-top: auto;
+  width: 100%;
+}
+
+.sidebar {
+  flex-shrink: 0;
 }

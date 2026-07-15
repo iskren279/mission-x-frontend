@@ -1,39 +1,33 @@
 .navbar {
   width: 100%;
   height: 60px;
+  flex-shrink: 0;
   background: white;
-  /* ****FLEXBOX*****SHOW THIS***** */
   display: flex;
-  justify-content: space-between; /* Crucial: pushes Left, Center, and Right apart */
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #d9d9d9;
 }
 
-/* Left Section */
+/* LEFT */
+
 .leftSection {
   display: flex;
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .logoImage {
-  height: 40px;
-  width: auto;
+  height: 38px;
 }
 
-/* FIX FOR THE CIRCLES: 
-   This wrapper holds the project text and progress trackers side-by-side
-*/
+/* CENTER */
+
 .centerSection {
   display: flex;
   align-items: center;
-  gap: 15px; /* Adjusts horizontal distance between text block and circle */
+  gap: 15px;
 }
 
 .projectInfo {
@@ -44,88 +38,76 @@
 .projectTitle {
   font-size: 12px;
   font-weight: bold;
+  color: #444;
 }
 
 .projectSubtitle {
   font-size: 10px;
-  color: #777;
+  color: #888;
 }
 
 .progressCircle {
   width: 24px;
   height: 24px;
+  border: 2px solid #f8b400;
   border-radius: 50%;
-  border: 2px solid #f7c948;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .progressDots {
   display: flex;
   gap: 6px;
-  align-items: center; /* Keeps little circles vertically centered */
 }
 
 .dot {
   width: 8px;
   height: 8px;
+  border: 2px solid #28b7f3;
   border-radius: 50%;
-  border: 2px solid #43c0f6;
 }
 
-/* Right Section */
+/* RIGHT */
+
 .rightSection {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .submitBtn,
 .helpBtn,
 .projectsBtn {
   border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
   color: white;
   font-size: 11px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px 16px;
   cursor: pointer;
 }
 
 .submitBtn {
-  background: #6d6d6d;
+  background: #f8a100;
 }
 
 .helpBtn {
-  background: #f91c85;
+  background: #f23b86;
 }
 
 .projectsBtn {
-  background: #43c0f6;
+  background: #28b7f3;
 }
 
-/* FIX FOR THE FLAGS: Spaced out further right */
 .flagsContainer {
   display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-left: 25px;
-  margin-top: -30px;
+  gap: 5px;
+  margin-left: 10px;
 }
 
 .flag {
   width: 20px;
-  height: 10px;
-  object-fit: contain;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.profileImage {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 10px;
 }
