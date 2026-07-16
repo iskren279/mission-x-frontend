@@ -31,11 +31,11 @@
   }
   
 .home-hero_content h1 {
-  margin: 0;
+  margin-top: 20px;
   max-width: 588px;
   font-family: "Nunito", sans-serif;
-  font-size: 60px; /* match XD */
-  font-weight: 800;
+  font-size: 58px; /* match XD */
+  font-weight: 700;
   line-height: 1.08; /* match XD */
   letter-spacing: 0; /* XD default */
   color: #656565;
@@ -46,13 +46,14 @@
   .highlight {
     color: #32c5f4;
     font-family: "Nunito", sans-serif;
+    font-weight: 800;
   }
   
   .home-hero_text {
     max-width: 562px;
     margin: 1.1rem 0 0;
     font-family: "Open Sans", sans-serif;
-    font-size: clamp(0.95rem, 1.25vw, 1.5rem);
+    font-size: 24px;
     line-height: 1.17;
     font-weight: 400;
     color: #4d4d4d;
@@ -60,19 +61,22 @@
   }
   
   .home-hero_actions {
+    margin-left: 130px;
     display: flex;
     align-items: flex-start;
-    gap: 0.95rem;
+    gap: 50px;
     margin-top: 1.1rem;
   }
   
   .home-hero_signup {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
   }
   
   .btn {
+    width: 170px;
+    height: 33px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +85,7 @@
     border-radius: 5px;
     border: 2px solid #42b8ea;
     font-family: "Nunito", sans-serif;
-    font-size: 0.66rem;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-decoration: none;
@@ -101,12 +105,15 @@
   }
   
   .subscription-info {
-    max-width: 126px;
-    margin-top: 0.15rem;
-    font-size: 0.58rem;
+    max-width: 140px;
+    margin-top: 0.14rem;
+    margin-right: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.56rem;
     line-height: 1.2;
     text-align: center;
-    color: #9aa7b5;
+    color: #707070;
   }
   
   .home-offer {
@@ -127,9 +134,9 @@
   }
   
   .home-offer_copy h2 {
-    font-family: "Nunito Black", sans-serif;
-    font-size: clamp(1.75rem, 2.19vw, 2.625rem);
-    font-weight: 520;
+    font-family: "Nunito Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
     letter-spacing: 0.02em;
   }
   
@@ -138,7 +145,7 @@
     margin: 0.8rem 0 0;
     color: #4d4d4d;
     font-family: "Open Sans", sans-serif;
-    font-size: clamp(0.85rem, 1.04vw, 1.25rem);
+    font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     font-weight: 400;
@@ -146,8 +153,8 @@
   
   .home-offer_copy h3 {
     margin-top: 2rem;
-    font-family: "Nunito Black", sans-serif;
-    font-weight: 520;
+    font-family: "Nunito Bold", sans-serif;
+    font-weight: 400;
     font-size: 1.7rem;
   }
   
@@ -163,14 +170,15 @@
   }
   
   .home-chip-card_icon-image {
-    width: clamp(96px, 7.9vw, 152px);
+    width: 152px;
     height: auto;
     aspect-ratio: 1 / 1;
     display: block;
     object-fit: cover;
-    border: 1px solid #42c0f6;
+    border: 1px solid #42C0F6;
     border-radius: 20px;
     box-shadow: 0px 4px 5px #00000029;
+    opacity: 1;
   }
   
   .home-offer_visual {
