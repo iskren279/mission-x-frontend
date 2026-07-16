@@ -1,0 +1,71 @@
+.container {
+  /* background-color: aqua; */
+  display: flex;
+  
+  height: 83vh;
+}
+.box1 {
+  /* background-color: blueviolet; */
+  height: 90%;
+  width: 77%;
+  margin-left: 2%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.box2 {
+  background-color: aqua;
+  height: 80%;
+  width: 95%;
+  margin-top: 4.4%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: blue transparent;
+}
+.box3 {
+  background-color: aqua;
+  width: 100%;
+  margin-left: 8%;
+  margin-top: 5%;
+  align-items: center;
+    position: sticky;
+  top: 0;
+}
+.btnSpace {
+margin-left: 72.2%;
+}
+.btnSpace1{
+  margin-left: 1%;
+}
+.card {
+  display: flex;
+  background-color: white;
+  width: 62vw;
+  height: 7vh;
+  margin-left: 1vw;
+  border-radius: 15px;
+  align-items: center;
+  margin: 2%;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.inPic {
+  display: flex;
+  width: 5%;
+  margin: 4%;
+  justify-content: center;
+}
+.inNameHelp {
+  width: 60%;
+}
+.inDate {
+  text-align: end;
+  width: 20%;
+  margin-right: 50px;
+}

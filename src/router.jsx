@@ -39,7 +39,7 @@ const router = createBrowserRouter([
                 Component : StudentProfileViewer,
             },
              {
-                path : "/teacher-profiles",
+                path : `/teacher-profiles/:teacher_id`,
                 Component : TeacherProfileViewer,
              },
             {
