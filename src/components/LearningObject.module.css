@@ -1,0 +1,38 @@
+.page {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.learningContainer {
+  background-color: #B2E4FA;
+  border-radius: 30px;
+  padding: 30px;
+  min-height: 85vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.projectImage {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+}

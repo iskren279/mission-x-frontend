@@ -11,11 +11,13 @@ import MakeProject from "./pages/studentDashboard/makeProject/MakeProject";
 import SubmitProject from "./pages/studentDashboard/submitProject/SubmitProject";
 import VideoTutorial from "./VideoTutorialpage.jsx";
 import TeacherDashboard from "./pages/teacherDashboard/TeacherDashboard";
+import TeacherProfileViewer from "./pages/teacherProfileViewer/TeacherProfileViewer.jsx";
 import HelpRequests from "./pages/teacherDashboard/helpRequests/HelpRequests";
 import ProgressTracker from "./pages/teacherDashboard/progressTracker/ProgressTracker";
 import ProjectSubmissions from "./pages/teacherDashboard/projectSubmissions/ProjectSubmissions";
 import StudentProfiles from "./pages/teacherDashboard/studentProfiles/StudentProfiles";
 // >>>>>>>>>>>SPEECH<<<<<<<<<<<<<
+const router = createBrowserRouter([
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,11 +40,14 @@ const router = createBrowserRouter([
         Component: StudentProfileViewer,
       },
       {
+        path: "/teacher-profiles/:teacher_id",
+        Component: TeacherProfileViewer,
+      },
+      {
         path: "/student-dashboard",
         Component: StudentDashboard,
         children: [
           {
-            // >>>>>>>>>SPEECH<<<<<<<<<<<<
             index: true,
             Component: LearningObjectives,
           },
@@ -62,6 +67,33 @@ const router = createBrowserRouter([
             path: "video-tutorial",
             Component: VideoTutorial,
           },
+        ],
+      },
+      {
+        path: "/teacher-dashboard",
+        Component: TeacherDashboard,
+        children: [
+          {
+            index: true,
+            Component: ProgressTracker,
+          },
+          {
+            path: "help-requests",
+            Component: HelpRequests,
+          },
+          {
+            path: "project-submissions",
+            Component: ProjectSubmissions,
+          },
+          {
+            path: "student-profiles",
+            Component: StudentProfiles,
+          },
+        ],
+      },
+    ],
+  },
+]);
         ],
       },
       {

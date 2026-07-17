@@ -5,16 +5,14 @@ import Navbar from "../../components/Navbar";
 import styles from "./StudentDashboard.module.css";
 
 export default function StudentDashboard() {
-  // >>>>>>>>>>SPEECH-Red arrow<<<<<<<<
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
     <div>
       <Navbar />
 
-      <div className="dashboardLayout">
+      <div className={styles.dashboardLayout}>
         <Sidebar
-          // >>>>>>>SPEECH-2 props to the sidebar component<<<<<<<<<<<<<<<<<<<<<
           isOpen={sidebarOpen}
           toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
         />
