@@ -10,43 +10,56 @@ import bonusChallengeIcon from "../assets/studentDashboard/bonusChallenge.png";
 import quizIcon from "../assets/studentDashboard/takeTheQuiz.png";
 
 import arrowLeft from "../assets/arrowLeft.png";
-
-export default function Sidebar() {
+// Add Navlink import from react router:
+import { NavLink } from "react-router-dom";
+// import useState
+import { useState } from "react";
+export default function Sidebar({ isOpen, toggleSidebar }) {
   // ********************SHOW THIS*********************
   // DYNAMIC RENDERING*****
+  // >>>>>>>>>>SPEECH<<<<<<<<<<<<<
   const menuItems = [
     {
       name: "Learning Objectives",
       icon: learningObjectivesIcon,
+      path: "/student-dashboard",
     },
     {
       name: "Instructions",
       icon: instructionsIcon,
+      path: "/student-dashboard/instructions",
     },
     {
       name: "Video Tutorial",
       icon: videoIcon,
+      path: "/student-dashboard/video-tutorial",
     },
     {
       name: "Make Project",
       icon: makeProjectIcon,
+      path: "/student-dashboard/make-project",
     },
     {
       name: "Submit Project",
       icon: submitProjectIcon,
+      path: "/student-dashboard/submit-project",
     },
     {
       name: "Bonus Challenge",
       icon: bonusChallengeIcon,
+      path: "/student-dashboard/bonus-challenge",
     },
     {
       name: "Take the Quiz",
       icon: quizIcon,
+      path: "/student-dashboard/take-the-quiz",
     },
   ];
 
   return (
-    <aside className={styles.sidebar}>
+    <aside
+      className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}
+    >
       {/* Profile Section at the very top */}
       <div className={styles.profileSection}>
         <img
@@ -55,30 +68,35 @@ export default function Sidebar() {
           className={styles.avatar}
         />
       </div>
+      <button className={styles.toggleButton} onClick={toggleSidebar}>
+        <img src={arrowLeft} alt="Toggle sidebar" />
+      </button>
 
       {/* Navigation */}
-      {/* ******************SHOW THIS ********************** */}
+      {/* ******************SPEECH ********************** */}
       <nav className={styles.menu}>
         {menuItems.map((item) => (
           <div key={item.name} className={styles.menuItemWrapper}>
-            <button
-              className={`${styles.navItem} ${
-                item.name === "Instructions" ? styles.active : ""
-              }`}
+            <NavLink
+              to={item.path}
+              end
+              className={({ isActive }) =>
+                `${styles.navItem} ${isActive ? styles.active : ""}`
+              }
             >
               <img src={item.icon} alt={item.name} className={styles.navIcon} />
               <span>{item.name}</span>
-            </button>
+            </NavLink>
 
-            {/* ************CONDITIONAL RENDERING- SHOW THIS************************* */}
+            {/*>>>>>>>>>>>>>SPEECH- ONCLICK EVENT<<<<<<<<<<<<<<<<< */}
             {item.name === "Take the Quiz" && (
-              <div className={styles.arrowContainer}>
+              <button className={styles.arrowContainer} onClick={toggleSidebar}>
                 <img
                   src={arrowLeft}
-                  alt="Arrow Left"
+                  alt="Toggle Sidebar"
                   className={styles.arrowLeft}
                 />
-              </div>
+              </button>
             )}
           </div>
         ))}

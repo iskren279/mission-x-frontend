@@ -1,5 +1,8 @@
 .sidebar {
   width: 230px;
+  /* >>>>>>>SPEECH<<<<<<<<<<<<<<<<<<< */
+  transition: width 0.3s ease;
+  overflow: hidden;
   background-color: #26b1ec;
   display: flex;
   flex-direction: column;
@@ -7,6 +10,50 @@
   padding-top: 25px;
 
   box-sizing: border-box;
+}
+
+/* >>>>>>>>SPEECH<<<<<<<<< */
+.open {
+  width: 230px;
+}
+
+.closed {
+  width: 70px;
+}
+
+.closed .navItem span {
+  display: none;
+}
+
+.closed .navItem {
+  justify-content: center;
+  padding: 12px;
+}
+
+.closed .navIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.toggleButton {
+  background: #bce6f4;
+  border: none;
+  width: 40px;
+  height: 35px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+
+  position: absolute;
+  right: -40px;
+  top: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton img {
+  width: 14px;
 }
 
 .profileSection {
@@ -61,6 +108,7 @@
   align-items: center;
   gap: 12px;
   transition: background-color 0.15s ease;
+  text-decoration: none;
 }
 
 /* Active tab style (The darker blue block highlight) */
@@ -89,7 +137,7 @@
   right: -12px;
   top: 150%;
   transform: translateY(-50%);
-
+  cursor: pointer;
   width: 50px;
   height: 32px;
 

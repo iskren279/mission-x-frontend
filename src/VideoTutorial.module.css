@@ -1,0 +1,58 @@
+.pageBackground {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #9ccff5;
+}
+
+/* Sidebar + video side by side */
+.contentArea {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Allow sidebar width to change */
+.contentArea > aside {
+  flex-shrink: 0;
+}
+
+/* Video area */
+.main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.videoArea {
+  background-color: #dff3ff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.videoWrapper {
+  width: 800px;
+  height: 450px;
+}
+
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  border-radius: 8px;
+}
+
+.cardFooter {
+  width: 100%;
+  background-color: white;
+  color: #333;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+}

@@ -1,11 +1,6 @@
-import { useState } from "react";
 import styles from "./VideoTutorial.module.css";
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 
 export default function VideoTutorialPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-
   return (
     <div className={styles.pageBackground}>
       <Navbar />

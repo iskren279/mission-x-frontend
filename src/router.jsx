@@ -9,13 +9,13 @@ import Instructions from "./pages/studentDashboard/instructions/Instructions";
 import LearningObjectives from "./pages/studentDashboard/learningObjectives/LearningObjectives";
 import MakeProject from "./pages/studentDashboard/makeProject/MakeProject";
 import SubmitProject from "./pages/studentDashboard/submitProject/SubmitProject";
-import VideoTutorial from "./pages/studentDashboard/videoTutorial/VideoTutorial";
+import VideoTutorial from "./VideoTutorialpage.jsx";
 import TeacherDashboard from "./pages/teacherDashboard/TeacherDashboard";
 import HelpRequests from "./pages/teacherDashboard/helpRequests/HelpRequests";
 import ProgressTracker from "./pages/teacherDashboard/progressTracker/ProgressTracker";
 import ProjectSubmissions from "./pages/teacherDashboard/projectSubmissions/ProjectSubmissions";
 import StudentProfiles from "./pages/teacherDashboard/studentProfiles/StudentProfiles";
-
+// >>>>>>>>>>>SPEECH<<<<<<<<<<<<<
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +42,7 @@ const router = createBrowserRouter([
         Component: StudentDashboard,
         children: [
           {
+            // >>>>>>>>>SPEECH<<<<<<<<<<<<
             index: true,
             Component: LearningObjectives,
           },
