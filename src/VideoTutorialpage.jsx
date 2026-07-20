@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./VideoTutorial.module.css";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "../components/Sidebar";
 import Navbar from "./components/Navbar";
 
 export default function VideoTutorialPage() {

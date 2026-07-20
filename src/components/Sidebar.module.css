@@ -122,16 +122,6 @@
   object-fit: contain;
 }
 
-.arrowLeft {
-  position: absolute;
-  right: 15px;
-  bottom: -30px;
-  width: 12px;
-  height: auto;
-  width: 12px;
-  height: auto;
-}
-
 .arrowContainer {
   position: absolute;
   right: -12px;

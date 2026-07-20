@@ -12,8 +12,7 @@ import quizIcon from "../assets/studentDashboard/takeTheQuiz.png";
 import arrowLeft from "../assets/arrowLeft.png";
 // Add Navlink import from react router:
 import { NavLink } from "react-router-dom";
-// import useState
-import { useState } from "react";
+
 export default function Sidebar({ isOpen, toggleSidebar }) {
   // ********************SHOW THIS*********************
   // DYNAMIC RENDERING*****
@@ -68,7 +67,11 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
           className={styles.avatar}
         />
       </div>
-      <button className={styles.toggleButton} onClick={toggleSidebar}>
+      <button
+        className={styles.toggleButton}
+        onClick={toggleSidebar}
+        aria-label={isOpen ? "Collapse sidebar" : "Expand sidebar"}
+      >
         <img src={arrowLeft} alt="Toggle sidebar" />
       </button>
 
@@ -80,11 +83,17 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
             <NavLink
               to={item.path}
               end
+              aria-label={item.name}
               className={({ isActive }) =>
                 `${styles.navItem} ${isActive ? styles.active : ""}`
               }
             >
-              <img src={item.icon} alt={item.name} className={styles.navIcon} />
+              <img
+                src={item.icon}
+                alt=""
+                aria-hidden="true"
+                className={styles.navIcon}
+              />
               <span>{item.name}</span>
             </NavLink>
 
