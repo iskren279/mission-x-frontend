@@ -1,44 +1,67 @@
+import { useState, useEffect } from "react";
+import DOMPurify from "dompurify";
 import styles from "./Instructions.module.css";
-import Sidebar from "../../../components/Sidebar";
-import Navbar from "../../../components/Navbar";
 
 export default function Instructions() {
-  return (
-    <div className={styles.app}>
-      <Sidebar />
+  const [instructions, setInstructions] = useState(null);
 
-      <div className={styles.pageContent}>
-        <Navbar />
+  useEffect(() => {
+    // Fetch instructions from backend API
+    fetch("http://localhost:4000/projects/1/instructions")
+      .then((res) => {
+        console.log("Status:", res.status);
 
-        <main className={styles.main}>
-          <div className={styles.card}>
-            <div className={styles.content}>
-              <h1>1. JOIN SCRATCH</h1>
+        if (!res.ok) {
+          throw new Error("Failed to fetch instructions");
+        }
 
-              <p>
-                If you haven't used Scratch before, you will need to join
-                Scratch first.
-              </p>
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Received data:", data);
 
-              <p>
-                Go to https://scratch.mit.edu. Click on{" "}
-                <span className={styles.joinScratch}>Join Scratch</span>.
-              </p>
-              <img
-                src="public/images/projects/project01-instructions.png"
-                alt="Project Instructions"
-                className={styles.img}
-              />
-              <p>
-                Follow the instructions to join. You will need a username and
-                password that you will remember.
-              </p>
-            </div>
+        const instructionsData = Array.isArray(data) ? data[0] : data;
 
-            <div className={styles.cardFooter}>© LevelUp Works 2020</div>
+        console.log("Setting instructions:", instructionsData);
+
+        setInstructions(instructionsData);
+      })
+      .catch((err) => {
+        console.error("Fetch error:", err);
+      });
+  }, []);
+
+  // Early return prevents the page trying to display
+  // data before the database request has completed.
+  if (!instructions) {
+    return (
+      <main className={styles.main}>
+        <div className={styles.card}>
+          <div className={styles.content}>
+            <h1>Loading Instructions...</h1>
           </div>
-        </main>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className={styles.main}>
+      <div className={styles.card}>
+        <div className={styles.content}>
+          {/*
+            Instructions are stored as HTML in the database.
+            DOMPurify removes unsafe HTML/scripts before displaying it,
+            preventing malicious code from being executed.
+          */}
+
+          <div
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(instructions.instructions || ""),
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

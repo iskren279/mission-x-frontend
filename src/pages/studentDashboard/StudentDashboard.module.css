@@ -1,0 +1,25 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #c7eaff;
+}
+
+.dashboardLayout {
+  display: flex;
+  flex: 1;
+  background-color: #8fd3f4;
+}
+
+.main {
+  flex: 1;
+  transition: all 0.3s ease;
+  background-color: #8fd3f4;
+}
+
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #8fd3f4;
+}
