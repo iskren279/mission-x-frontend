@@ -112,7 +112,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
       </nav>
 
       {/* Footer */}
-      <Footer />
+      <Footer isOpen={isOpen} />
     </aside>
   );
 }

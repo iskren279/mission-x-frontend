@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
+import PageFooter from "../../components/PageFooter";
 import styles from "./StudentDashboard.module.css";
 
 export default function StudentDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <div>
+    <div className={styles.dashboard}>
       <Navbar />
 
       <div className={styles.dashboardLayout}>
@@ -17,10 +18,12 @@ export default function StudentDashboard() {
           toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
         />
 
-        <main style={{ flex: 1 }}>
+        <main className={styles.main}>
           <Outlet />
         </main>
       </div>
+
+      <PageFooter />
     </div>
   );
 }
