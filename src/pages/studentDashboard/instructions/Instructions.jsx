@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import DOMPurify from "dompurify";
+import { useNavigate } from "react-router-dom";
 import styles from "./Instructions.module.css";
 
 export default function Instructions() {
