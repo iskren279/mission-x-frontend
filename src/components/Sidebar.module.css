@@ -124,25 +124,17 @@
 }
 
 .arrowContainer {
-  position: absolute;
-  right: -12px;
-  top: 150%;
-  transform: translateY(-50%);
-  cursor: pointer;
+  margin-top: 12px;
+  margin-left: auto;
   width: 50px;
   height: 32px;
-
-  /* Blends into the outer blue */
   background-color: #8fd3f4;
-
-  /* Removes black border */
   border: none;
-
   border-radius: 8px 0 0 8px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .arrowLeft {
