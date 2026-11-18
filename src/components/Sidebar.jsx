@@ -1,13 +1,13 @@
 import styles from "./Sidebar.module.css";
 import Footer from "./Footer";
 
-import learningObjectivesIcon from "../assets/studentDashboard/learningObjectives.png";
-import instructionsIcon from "../assets/studentDashboard/instructionsSelected.png";
-import videoIcon from "../assets/studentDashboard/video.png";
-import makeProjectIcon from "../assets/studentDashboard/makeProject.png";
-import submitProjectIcon from "../assets/studentDashboard/submitProject.png";
-import bonusChallengeIcon from "../assets/studentDashboard/bonusChallenge.png";
-import quizIcon from "../assets/studentDashboard/takeTheQuiz.png";
+import learningObjectivesIcon from "../assets/StudentDashboard/learningObjectives.png";
+import instructionsIcon from "../assets/StudentDashboard/instructionsSelected.png";
+import videoIcon from "../assets/StudentDashboard/video.png";
+import makeProjectIcon from "../assets/StudentDashboard/makeProject.png";
+import submitProjectIcon from "../assets/StudentDashboard/submitProject.png";
+import bonusChallengeIcon from "../assets/StudentDashboard/bonusChallenge.png";
+import quizIcon from "../assets/StudentDashboard/takeTheQuiz.png";
 
 import arrowLeft from "../assets/arrowLeft.png";
 // Add Navlink import from react router:
